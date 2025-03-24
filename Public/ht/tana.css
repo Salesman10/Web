@@ -1,0 +1,21 @@
+*{
+  background: url(images/pexels-pixabay-41949.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+h1 {
+  text-align: center;
+  color: white;
+  font-size: 3em;
+  font-weight: 500;
+  border: 1px;
+  overflow: hidden;
+  margin: 20px;
+  transition: 0.7s ease;
+}
+
+h1:hover {
+  transform: scale(1.1);
+}
