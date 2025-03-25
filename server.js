@@ -4,20 +4,18 @@ const path = require('path');
 const app = express();
 const PORT = process.env.PORT || 8080;
 
-// Serve static files from the "public" folder
+// Serve static files
 app.use(express.static('public'));
 
-// Serve index.html as the main page
+// Serve index.html
 app.get('/', (_, res) => {
     res.sendFile(path.join(__dirname, 'public', 'index.html'));
 });
 
-// Health check route
 app.get('/health', (_, res) => {
     res.status(200).send('OK');
 });
 
-// Start the server
 app.listen(PORT, () => {
-    console.log(`Server is running on port ${PORT}`);
+    console.log(`Server running on port ${PORT}`);
 });
